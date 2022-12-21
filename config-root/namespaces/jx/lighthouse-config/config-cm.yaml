@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - ba11b0y/temp-jx3
-      target_url: http://lighthouse.jx.192.168.64.2.nip.io/merge/status
+      target_url: http://lighthouse.jx.192.168.5.15.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null

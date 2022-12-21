@@ -38,7 +38,7 @@ jxRequirements:
     repository: temp-jx3
   - key: staging
   ingress:
-    domain: 192.168.64.2.nip.io
+    domain: 192.168.5.15.nip.io
     ignoreLoadBalancer: true
     kind: ingress
     namespaceSubDomain: .jx.
