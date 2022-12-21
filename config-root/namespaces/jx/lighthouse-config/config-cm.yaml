@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         ba11b0y/temp-jx3: true
+        ba11b0y/temp-quickstart: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         ba11b0y/temp-jx3: merge
+        ba11b0y/temp-quickstart: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - ba11b0y/temp-jx3
+        - ba11b0y/temp-quickstart
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - ba11b0y/temp-jx3
+        - ba11b0y/temp-quickstart
       target_url: http://lighthouse.jx.192.168.5.15.nip.io/merge/status
 kind: ConfigMap
 metadata:
