@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: ba11b0y
+    provider: github
+    repository: temp-quickstart
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: ba11b0y-temp-quickstart
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/ba11b0y/temp-quickstart.git
+  org: ba11b0y
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: temp-quickstart
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/ba11b0y/temp-quickstart

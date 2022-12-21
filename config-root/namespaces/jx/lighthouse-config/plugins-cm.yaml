@@ -6,6 +6,10 @@ data:
       repos:
       - ba11b0y/temp-jx3
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - ba11b0y/temp-quickstart
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -21,6 +25,11 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      ba11b0y/temp-quickstart:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
     heart: {}
     label:
       additional_labels: null
@@ -28,6 +37,20 @@ data:
     plugins:
       ba11b0y/temp-jx3:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      ba11b0y/temp-quickstart:
       - approve
       - assign
       - help
@@ -53,6 +76,11 @@ data:
     - repos:
       - ba11b0y/temp-jx3
       trusted_org: todo
+    - repos:
+      - ba11b0y/temp-quickstart
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
